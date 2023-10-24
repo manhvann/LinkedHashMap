@@ -7,6 +7,8 @@ package wrapper_linkedhashmap;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -21,8 +23,10 @@ public class LinkedHashMapToArrayList {
         linkedHashMap.put("Manh4", 8.5);
         linkedHashMap.put("Manh5", 9.5);
         
-        List<String> list = new ArrayList<>(linkedHashMap.keySet());
-        System.out.println(list);
+        Set<Map.Entry<String,Double>> entrys = linkedHashMap.entrySet();
+        
+        List<Map.Entry<String,Double>> listEntrys = new ArrayList<>(entrys);
+        System.out.println(listEntrys);
         
         
     }
