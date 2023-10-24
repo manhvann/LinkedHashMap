@@ -6,6 +6,7 @@ package wrapper_linkedhashmap;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  *
@@ -13,23 +14,53 @@ import java.util.Map;
  */
 public class ConstructorsOfLinkedHashMap {
     public static void main(String[] args) {
-        //Constructor ko tham số LinkedHashMap()
-        Map<Integer, String> linkedHashMap1 = new LinkedHashMap<>();
-        System.out.println("linkedHashMap1 of size: "+ linkedHashMap1.size());
-        linkedHashMap1.put(1,"Basic java");
-        linkedHashMap1.put(2,"OOP");
-        linkedHashMap1.put(3,"Exception");
+        //Constructor ko tham số:  LinkedHashMap()
+        LinkedHashMap<Integer, String> linkedHashMap1 = new LinkedHashMap<>();
+        System.out.println("Size of the linkedHashMap1: "+ linkedHashMap1.size());
+        linkedHashMap1.put(1,"one");
+        linkedHashMap1.put(2,"two");
+        linkedHashMap1.put(3,"three");
         
-        //Contructor 1 tham số là capacity LinkedHashMap(int capacity)
+        //Contructor 1 tham số là capacity: LinkedHashMap(int capacity)
         LinkedHashMap<Integer, String> linkedHashMap2 = new LinkedHashMap<>(1);
-        System.out.println("linkedHashMap2 of size: "+ linkedHashMap2.size());
-        linkedHashMap2.put(12, "Generic");
-        linkedHashMap2.put(13, "String");
+        System.out.println("Size of the linkedHashMap2: "+ linkedHashMap2.size());
+        linkedHashMap2.put(12, "twelve");
+        linkedHashMap2.put(13, "thirteen");
         
-        //Contructor với 1 tham số là một map đã có LinkedHashMap(Map<? extends K,​? extends V> map)
+        //Contructor với 1 tham số là một map đã sẵn:  LinkedHashMap(Map<? extends K,​? extends V> map)
         LinkedHashMap<Integer, String> linkedHashMap3 = new LinkedHashMap<>(linkedHashMap1);
         System.out.println(linkedHashMap1);
-        System.out.println("Hello");
+        
+        //LinkedHashMap(int capacity, float fillRatio)
+        LinkedHashMap<Integer, String> linkedHashMap4 = new LinkedHashMap<>(4,0.5f);
+        linkedHashMap4.put(5,"five");
+        linkedHashMap4.put(6,"six");
+        linkedHashMap4.put(7,"seven");
+        linkedHashMap4.put(8,"eight");
+        linkedHashMap4.put(9,"nine");
+        linkedHashMap4.put(10,"ten");
+        System.out.println("Size of the linkedHashMap4: " + linkedHashMap4.size());
+        
+        
+        //LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
+        LinkedHashMap<Integer,String> linkedHashMap5 = new LinkedHashMap<>(4,0.5f,true);
+        linkedHashMap5.put(5,"five");
+        linkedHashMap5.put(6,"six");
+        linkedHashMap5.put(7,"seven");
+        linkedHashMap5.put(8,"eight");
+        linkedHashMap5.put(9,"nine");
+        
+        String Value1 = linkedHashMap5.get(8);
+        String Value2 = linkedHashMap5.get(7);
+        
+        System.out.println("Size: " + linkedHashMap5.size());
+        for(Entry<Integer,String> entry : linkedHashMap5.entrySet()){
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+            System.out.print(key + " " + value + ",");
+        }
+        System.out.println("");
+        System.out.println(linkedHashMap5);
         
         
     }
