@@ -26,7 +26,7 @@ public class LinkedHashMapToArrayList {
         Set<Map.Entry<String,Double>> entrys = linkedHashMap.entrySet();
         
         List<Map.Entry<String,Double>> listEntrys = new ArrayList<>(entrys);
-        System.out.println(listEntrys);
+        System.out.println("Chuyển LinkedList sang ArrayList: "+listEntrys);
         
         
     }

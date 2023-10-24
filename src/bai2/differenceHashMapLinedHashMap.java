@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bai1;
+package bai2;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -12,7 +12,7 @@ import java.util.Map;
  *
  * @author Nguyen Van Manh
  */
-public class test {
+public class differenceHashMapLinedHashMap {
     public static void main(String[] args) {
         // Sử dụng HashMap
         Map<String, Integer> hashMap = new HashMap<>();
