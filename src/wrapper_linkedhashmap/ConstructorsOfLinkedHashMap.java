@@ -29,7 +29,7 @@ public class ConstructorsOfLinkedHashMap {
         //Contructor với 1 tham số là một map đã có LinkedHashMap(Map<? extends K,​? extends V> map)
         LinkedHashMap<Integer, String> linkedHashMap3 = new LinkedHashMap<>(linkedHashMap1);
         System.out.println(linkedHashMap1);
-        
+        System.out.println("Hello");
         
         
     }
