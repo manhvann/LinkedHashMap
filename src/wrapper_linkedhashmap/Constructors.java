@@ -5,14 +5,13 @@
 package wrapper_linkedhashmap;
 
 import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Map.Entry;
+
 
 /**
  *
  * @author NGUYEN VAN MANH
  */
-public class ConstructorsOfLinkedHashMap {
+public class Constructors {
     public static void main(String[] args) {
         //Constructor ko tham số:  LinkedHashMap()
         LinkedHashMap<Integer, String> linkedHashMap1 = new LinkedHashMap<>();
@@ -53,13 +52,7 @@ public class ConstructorsOfLinkedHashMap {
         String Value1 = linkedHashMap5.get(8);
         String Value2 = linkedHashMap5.get(7);
         
-        System.out.println("Size: " + linkedHashMap5.size());
-        for(Entry<Integer,String> entry : linkedHashMap5.entrySet()){
-            Integer key = entry.getKey();
-            String value = entry.getValue();
-            System.out.print(key + " " + value + ",");
-        }
-        System.out.println("");
+        System.out.println("Size of the linkedHashMap5: " + linkedHashMap5.size());
         System.out.println(linkedHashMap5);
         
         
